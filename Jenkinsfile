@@ -59,6 +59,7 @@ pipeline {
                 branch 'master'
             }
             steps {
+                input(do smoke test?)
                 script {
                     sleep (time: 5)
                     def response = httpRequest (
